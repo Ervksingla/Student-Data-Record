@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+</head>
+
+<body>
+    <h1>Student Data App</h1>
+    <div class="btn-class">
+        <button class="btn" type="button" style="background-color: gainsboro;" id="btnCreate">Create Student
+            Data</button>
+        <button class="btn" type="button" style="background-color: gainsboro;" id="btnShow">Show Data</button>
+        <input type="button" id="myInput" value="By Roll No.">
+        <input type="button" id="byName" value="By Name">
+
+    </div>
+    <div id="first">
+        <h3 id="head">Please fill the form details carefully as per the norms:</h3>
+        <form class="ff">
+            <label>Name:</label>
+            <input class="input" id="fname" type="text" name="firstname" maxlength="15"
+                placeholder="Enter your First name" />
+            <!-- <label>Lastname:</label> -->
+            <input class="input" id="lname" type="text" name="lastname" maxlength="15"
+                placeholder="Enter your Surname" />
+
+            <label>Class :</label>
+            <select id="claass">
+                <option value="1">Class</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <select id="section">
+                <option value="A">Section</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+            </select>
+
+            <label>Roll-NO :</label>
+            <input class="input" id="rollno" type="text" name="roll-no" maxlength="3"
+                placeholder="Enter the Class Roll-No">
+            <label>Date Of Birth:</label>
+            <input class="input" id="dob" type="date" name="date">
+            <label>Phone:</label>
+            <input class="input" id="no91" type="text" name="country code" value="+91" maxlength="2"/>
+            <input class="input" id="no" type="text" name="phone" maxlength="10"
+                placeholder="Enter your Contact Number" />
+            <label>Email Id :</label>
+            <input style="width:80%;" class="input" id="email" type="email" name="email"
+                placeholder="Enter your E-mail address" />
+
+            <input type="date" id="createDate" style="display:none;">
+
+            <button type="button"
+                style="background-color:salmon ;font-family:'Courier New', Courier, monospace; font-size: medium;"
+                onclick="show()">Click to Submit</button>
+
+        </form>
+
+
+    </div>
+    <input type="text" id="searchdata"  onkeyup="searching()" placeholder="Search here...">
+    <div id="table">
+        <h3 style="background-color: aliceblue; width: max-content;">Students Record in Table:</h3><br><br>
+    </div>
+
+    <div id="containers">
+        <h3 id="heads">Please fill the form details carefully as per the norms:</h3>
+        <form class="ff">
+            <label>Name:</label>
+            <input class="input" id="fnam" type="text" name="firstname" maxlength="15"
+                placeholder="Enter your First name" />
+            <!-- <label> Lastna</label> -->
+            <input class="input" id="lnam" type="text" name="lastname" maxlength="15"
+                placeholder="Enter your Surname" />
+            <label>Class:</label>
+            <select id="classs">
+                <option value="Class">Class</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <select id="sect">
+                <option value="Section">Section</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+            </select>
+
+            <label>Roll-NO:</label>
+            <input id="rollnos" type="text" name="roll-no" maxlength="3"
+                placeholder="Enter the Class Roll-No">
+            <label>Date Of Birth:</label>
+            <input class="input" id="dobs" type="date" name="date">
+            <label>Phone:</label>
+            <input type="text" class="input" id="nos91" name="country code" value="+91" size="2" />
+            <input class="input" id="nos" type="text" name="phone" maxlength="10"
+                placeholder="Enter your Contact Number" />
+            <label>Email ID:</label>
+            <input style="width:83%;" class="input" id="emails" type="email" name="email"
+                placeholder="Enter your E-mail address" />
+
+            <input type="date" id="updateDate" style="display:none;">
+            <br>
+            <button type="button" id="update"
+                style="background-color:salmon ;font-family:'Courier New', Courier, monospace; font-size: medium;">Click
+                to Update</button>
+
+        </form>
+
+    </div>
+    <script src="todo.js"></script>
+</body>
+
+</html>
